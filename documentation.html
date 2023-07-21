@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>My HTML5 Document</title>
+</head>
+<body>
+    <p>
+        <b>1. To retrieve the full data set:</b><br><br>
+        &#45; Endpoint: http://localhost:3000/receive &#40;NO parameter needed and NO data need to be sent&#41;<br><br>
+        &#45; HTTP Method: GET &#40;Error: status 500, Success: 200OK&#41;<br><br>
+        &#45; MIME format in response: application/json<br><br>
+        &#45; Example:<br><br>
+        input() <br><br>
+        output( <br><br>
+        [{"id":1, <br><br>
+        "author":"Tim Berners-Lee",<br><br>
+        "alt":"Image of Berners-Lee", <br><br>
+        "tags":"html,http,url,cern,mit",<br><br>
+        "image":"https://upload.wikimedia.org/wikipedia/commons/9/9d/Sir_Tim_Berners-Lee.jpg",<br><br>
+        "description":"The internet and the Web aren't the same thing."},<br><br>
+        {"id":2,<br><br>
+        "author":"Grace Hopper",<br><br>
+        "alt":"Image of Grace Hopper at the UNIVAC I console",<br><br>
+        "tags":"programming,linking,navy",<br><br>
+        "image":"https://upload.wikimedia.org/wikipedia/commons/3/37/Grace_Hopper_and_UNIVAC.jpg",<br><br>
+        "description":"Grace was very curious as a child; this was a lifelong trait. At the age of seven, she decided to determine how an alarm clock worked and dismantled seven alarm clocks before her mother realized what she was doing (she was then limited to one clock)."}])<br><br><br>
+
+        <b>2. To add data for a new photo item</b><br><br>
+        &#45; Endpoint: http://localhost:3000/submit &#40;NO parameter and JSON.stringified form data required including image, author, alt, tags and description&#41;<br><br>
+        &#45; HTTP Method: POST &#40;Error: status 500, Success: 201&#41;<br><br>
+        &#45; MIME format in response: NO response data<br><br>
+        &#45; Example: <br><br>
+        input(<br><br>
+        {"author":"Tim Berners-Lee",<br><br>
+        "alt":"Image of Berners-Lee",<br><br>
+        "tags":"html,http,url,cern,mit",<br><br>
+        "image":"https://upload.wikimedia.org/wikipedia/commons/9/9d/Sir_Tim_Berners-Lee.jpg",<br><br>
+        "description":"The internet and the Web aren't the same thing."}) <br><br>
+        output()<br><br><br>
+
+        <b>3. To list the data of a specific item</b><br><br>
+        &#45; Endpoint: http://localhost:3000/receive/:id &#40;YES parameter(ID of the item) and JSON.stringified form data required including ID&#41;<br><br>
+        &#45; HTTP Method: GET &#40;Error: status 500, Success: 200OK&#41;<br><br>
+        &#45; MIME format in response: application/json<br><br>
+        &#45; Example: <br><br>
+        input({"id":3}) <br><br>
+        output(<br><br>
+        {"id":1,<br><br>
+        "author":"Tim Berners-Lee",<br><br>
+        "alt":"Image of Berners-Lee",<br><br>
+        "tags":"html,http,url,cern,mit",<br><br>
+        "image":"https://upload.wikimedia.org/wikipedia/commons/9/9d/Sir_Tim_Berners-Lee.jpg",<br><br>
+        "description":"The internet and the Web aren't the same thing."})<br><br><br>
+
+        <b>4. To change data of a specific item</b><br><br>
+        &#45; Endpoint: http://localhost:3000/item/:id &#40;YES parameter(ID of the item) and JSON.stringified form data required including ID, url, author, alt, tags and description&#41;<br><br>
+        &#45; HTTP Method: PUT &#40;Error: status 500, Success: 200OK&#41;<br><br>
+        &#45; MIME format in response: NO response data<br><br>
+        &#45; Example: <br><br>
+        input(<br><br>
+        {"id":1,<br><br>
+        "author":"Tim Berners-Lee",<br><br>
+        "alt":"Image of Berners-Lee",<br><br>
+        "tags":"html,http,url,cern,mit",<br><br>
+        "image":"https://upload.wikimedia.org/wikipedia/commons/9/9d/Sir_Tim_Berners-Lee.jpg",<br><br>
+        "description":"The internet and the Web aren't the same thing."}) <br><br>
+        output()<br><br><br>
+
+        <b>5. To remove data of a specific item</b><br><br>
+        &#45; Endpoint: http://localhost:3000/delete/:id &#40;YES parameter(ID of the item) and JSON.stringified form data required including ID&#41;<br><br>
+        &#45; HTTP Method: DELETE &#40;Error: status 500, Success: 204&#41;<br><br>
+        &#45; MIME format in response: NO response data<br><br>
+        &#45; Example: <br><br>
+        input({"id":3}) <br><br>
+        output()<br><br><br>
+
+        <b>6. To reset the database</b><br><br>
+        &#45; Endpoint: http://localhost:3000/reset &#40;NO parameter and NO data need to be sent&#41;<br><br>
+        &#45; HTTP Method: DELETE &#40;Error: status 500, Success: 200OK&#41;<br><br>
+        &#45; MIME format in response: NO response data<br><br>
+        &#45; Example: <br><br>
+        input() <br><br>
+        output()
+    </p>
+</body>
+</html>

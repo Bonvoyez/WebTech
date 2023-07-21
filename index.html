@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML/CSS Markup</title>
+    <link id="stylesheet" rel="stylesheet" type="text/css" href="styles.css">
+    <script src="dynamics.js"></script>
+</head>
+<body>
+    <header>
+        <h1><img src="https://i.pinimg.com/736x/44/3b/76/443b762e06abcc45c1e3e5d147f34e1e.jpg" alt="Image of books">Famous Authors<img src="https://i.pinimg.com/736x/44/3b/76/443b762e06abcc45c1e3e5d147f34e1e.jpg" alt="Image of books"></h1>
+        <hr>
+    </header>
+    <section id="contents">
+        <div id="menu">
+            <div><input type="text" id="searchBar" placeholder="Search for authors..."></div>
+            <div id="authorsList-wrap">
+                <p id="authorsListTitle">Authors:</p>
+                <div id="authorsList"></div>
+            </div>
+        </div>
+        <div id="authors-wrap">
+            <div id="buttons">
+                <button id="addNewAuthor">&nbsp;&nbsp;ADD&nbsp;&nbsp;</button>
+                <button id="updateButton">UPDATE</button>
+                <button id="deleteButton">DELETE</button>
+                <button id="getItemButton">GET ITEM</button>
+                <button id="resetButton">RESET</button>
+            <h2>Authors</h2>
+            <div id="authors"></div><br>
+        </div>
+        <div id="modal1">
+            <div id="modal1-content">
+                <form id="modal1ItemForm">
+                    <span id="close1">&times;</span>
+        
+                    <label for="modal1imgURL">Image URL:</label>
+                    <input type="url" name="image" id="modal1imgURL" required><br>
+        
+                    <label for="modal1author">Author:</label>
+                    <input type="text" name="author" id="modal1author" required><br>
+        
+                    <label for="modal1alt">Alt:</label>
+                    <input type="text" name="alt" id="modal1alt" required><br>
+        
+                    <label for="modal1tags">Tags:</label>
+                    <input type="text" name="tags" id="modal1tags" required><br>
+        
+                    <label for="modal1description">Description:</label>
+                    <input type="text" name="description" id="modal1description" required><br>
+        
+                    <input type="submit" id="modal1submitForm">                  
+                </form>
+            </div>
+        </div>
+        <div id="modal2">
+            <div id="modal2-content">
+                <form id="modal2ItemForm">
+                    <span id="close2">&times;</span>
+
+                    <label for="modal2id">ID:</label>
+                    <input type="text" name="id" id="modal2id" required><br>
+
+                    <label for="modal2imgURL">Image URL:</label>
+                    <input type="url" name="image" id="modal2imgURL" required><br>
+        
+                    <label for="modal2author">Author:</label>
+                    <input type="text" name="author" id="modal2author" required><br>
+        
+                    <label for="modal2alt">Alt:</label>
+                    <input type="text" name="alt" id="modal2alt" required><br>
+        
+                    <label for="modal2tags">Tags:</label>
+                    <input type="text" name="tags" id="modal2tags" required><br>
+        
+                    <label for="modal2description">Description:</label>
+                    <input type="text" name="description" id="modal2description" required><br>
+        
+                    <input type="submit" id="modal2submitForm">                  
+                </form>
+            </div>
+        </div>
+        <div id="modal3">
+            <div id="modal3-content">
+                <form id="modal3ItemForm">
+                    <span id="close3">&times;</span>
+
+                    <label for="modal3id">ID:</label>
+                    <input type="text" name="id" id="modal3id" required>
+
+                    <input type="submit" id="modal3submitForm">
+                </form>
+            </div>
+        </div>
+        <div id="modal4">
+            <div id="modal4-content">
+                <form id="modal4ItemForm">
+                    <span id="close4">&times;</span>
+
+                    <label for="modal4id">ID:</label>
+                    <input type="text" name="id" id="modal4id" required>
+
+                    <input type="submit" id="modal4submitForm">
+                </form>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>&#169; Juyoung Heo 2023</p>
+        <div>
+            <p>Vrije Universiteit Amsterdam Computer Science</p>
+        </div>
+    </footer>
+</body>
+</html>
+<!-- For 4.1.1, IDs now have unique names. w3c validator check passes. Accessibility fixed when screen size is small-->
